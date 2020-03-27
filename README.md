@@ -1,12 +1,12 @@
-# Nome_da_Aplicação
+# Caça Palavras Sarvalap
 
 <!--- Exemplos de badges. Acesse https://shields.io para outras opções. Você pode querer incluir informações de dependencias, build, testes, licença, etc. --->
 ![GitHub repo size](https://img.shields.io/github/repo-size/hsborges/progweb-template)
 ![GitHub contributors](https://img.shields.io/github/contributors/hsborges/progweb-template)
 
-Nome_da_Aplicação é um/uma ... que permite/tem por objetivo/visa/etc .... 
+Caça Palavras Sarvalap é um caça palavras que desafia o usuário a achar todas as palavras de um conjunto de palavras em uma matriz de caracteres. 
 
-Coloque aqui linhas adicionais com informações sobre o que a aplicação faz. Sua introdução deve ser de no máximo 3 parágrafos, seja simples e objetivo para não sobrecarregar de detalhes desnecessários este espaço. Se necessário, crie novas seções abaixo.
+Esse caça palavras haverá níveis de dificuldade que serão desbloqueados de acordo com a pontuação do usuário. Tal pontuação será calculada pelo tempo para achar todas as palavras.
 
 ## Pré-requisitos
 
@@ -50,8 +50,8 @@ Para usar Nome_da_Aplicação, siga os seguintes passos (exemplos):
 
 As seguintes pessoas contribuiram para este projeto:
 
-* [Meu nome](https://github.com/meu_nome)
-* *.... (liste todos os membros da equipe)*
+* Felipe Salles Lopes (https://github.com/El-Raptor)
+* Felipe Vasconcelos (https://github.com/fv0197)
 
 ## Licença de uso
 
