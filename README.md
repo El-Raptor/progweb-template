@@ -56,5 +56,5 @@ As seguintes pessoas contribuiram para este projeto:
 ## Licença de uso
 
 <!--- Se não tiver certeza de qual, verifique este site: https://choosealicense.com/--->
-Este projeto usa a seguinte licença: [<nome_da_licenca>](<link>).
+Este projeto usa a seguinte licença: [GNU General Public License v2.0](https://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
 *Você também deve criar um arquivo chamado LICENSE no projeto*
