@@ -12,24 +12,26 @@
     <header>
         <nav id="main-nav">
             <ul>
-                <li><a href="#">Sarvalap[LOGO AQUI]</a></li>
-                <li><a href="#">Home</a></li>
+                <li><a href="controller/Handler.php?action=home">Sarvalap[LOGO AQUI]</a></li>
+                <li><a href="controller/Handler.php?action=home">Home</a></li>
                 <li><a href="#">Cartegorias</a></li>
             </ul>
         </nav>
         <nav id="login">
-            <ul>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">|</a></li>
-                <li><a href="#">Cadastre-se</a></li>
-            </ul>
+            <form method="POST">
+                <ul>
+                    <li><a href="controller/Handler.php?action=login">Login</a></li>
+                    <li><a href="#">|</a></li>
+                    <li><a href="controller/Handler.php?action=cadastrar">Cadastre-se</a></li>
+                </ul>
+            </form>
         </nav>
     </header>
 
     <section id="row">
         <section id="column">
             <div>
-                <img src="res/caca-palavras.png" alt="caça-palavras a implementar">
+                <img src="trabalho/res/caca-palavras.png" alt="caça-palavras a implementar">
             </div>
         </section>
         <button>Categorias</button>
