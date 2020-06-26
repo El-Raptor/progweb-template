@@ -6,7 +6,8 @@ abstract class Controller {
     }
 
     public function home($data = []) {
-        require $_SERVER['DOCUMENT_ROOT'] . '/trabalho/index.html';
+        //require $_SERVER['DOCUMENT_ROOT'] . '/trabalho/index.html';
+        header("Location: ../index.php");
     }
 }
 

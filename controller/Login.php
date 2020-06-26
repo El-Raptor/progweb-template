@@ -16,18 +16,20 @@ class LoginController extends Controller {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $user = User::search($_POST['email']);
 
-            if (!is_null($user) && $user->equals($_POST['email'], $_POST['password'])) {
+            if (!is_null($user) && $user->equals($_POST['email'])) {
                 $_SESSION['user'] = $this->loggedUser = $user;
             }
 
             if ($this->loggedUser) {
                 // TODO;
                 // Substituir a âncora "login" e "cadastro" pelo nome do usuário.
-                header('Location: ../index.html');
+                header('Location: ../index.php');
             } else {
                 // TODO;
                 // Aviso de erro de senha ou email.
-                header('Location: ../index.html');
+                echo "erro";
+                echo $this->loggedUser;
+                //header('Location: ../errror');
             }
         } else {
             if (!$this->loggedUser) {
@@ -48,11 +50,11 @@ class LoginController extends Controller {
                 $user->save();
                 // TODO;
                 // Aviso de sucesso de cadastro
-                header('Location: ../index.html');
+                header('Location: ../index.php');
             } catch(PDOException $e) {
                 // TODO;
                 // Aviso de email já cadastrado 
-                header('Location: ../index.html');
+                header('Location: ../error.php');
             }
 
             $this->view('/users/info', $this->loggedUser);
