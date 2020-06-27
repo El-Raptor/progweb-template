@@ -19,20 +19,29 @@
         </nav>
         <nav id="login">
             <form method="POST">
-                <?php 
-                    session_start();
-                    if (isset($_SESSION['users'])) {
-                        echo "<ul>";
-                        echo "<li><a href=controller/Handler.php?action=info>Perfil</a></li>";
-                        echo "<li><a href=controller/Handler.php?actuib=logout>Sair</a></li>";
-                        echo "</ul>";
-                    } else {
-                        echo "<ul>";
-                        echo "<li><a href=controller/Handler.php?action=login>Login</a></li>";
-                        echo "<li><a href=>|</a></li>";
-                        echo "<li><a href=controller/Handler.php?action=cadastrar>Cadastre-se</a></li>";
-                        echo "</ul>";
-                    }
+                <?php
+                $loggedUser;   
+                session_start();
+                if (isset($_SESSION['user']))
+                    $loggedUser = $_SESSION['user'];
+                else
+                    $loggedUser = false;
+
+                if ($loggedUser) {?>
+                    <ul>
+                    <li><a href="controller/Handler.php?action=info">Perfil</a></li>
+                    <li><a href="controller/Handler.php?action=sair">Sair</a></li>
+                    </ul>
+                <?php
+                } else { ?>
+    
+                    <ul>
+                    <li><a href="controller/Handler.php?action=login">Login</a></li>
+                    <li><a href="#">|</a></li>
+                    <li><a href="controller/Handler.php?action=cadastrar">Cadastre-se</a></li>
+                    </ul>
+                <?php
+                }
                 ?>
                 
             </form>

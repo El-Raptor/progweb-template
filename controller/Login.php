@@ -16,8 +16,9 @@ class LoginController extends Controller {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $user = User::search($_POST['email']);
 
-            if (!is_null($user) && $user->equals($_POST['email'])) {
-                $_SESSION['user'] = $this->loggedUser = $user;
+            if (!is_null($user) && $user->equals($_POST['email'], $_POST['password'])) {
+                $this->loggedUser = $user;
+                $_SESSION['user'] = $this->loggedUser;
             }
 
             if ($this->loggedUser) {
@@ -28,7 +29,7 @@ class LoginController extends Controller {
                 // TODO;
                 // Aviso de erro de senha ou email.
                 echo "erro";
-                echo $this->loggedUser;
+                echo $user;
                 //header('Location: ../errror');
             }
         } else {
@@ -80,7 +81,7 @@ class LoginController extends Controller {
             return;
         } else {
             unset($_SESSION['user']);
-            header('Location: ../index.html');
+            header('Location: ../index.php');
         }
     }
 }

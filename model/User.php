@@ -36,15 +36,16 @@ class User {
 
         $stmt = $db->prepare('SELECT * FROM users WHERE email = :email');
         $stmt->bindValue(':email', $email);
-        $stmt->execute();
+        $stmt->execute(); 
 
         $result = $stmt->fetch();
 
         if ($result) {
             $user = new User($result['email'], $result['password'], $result['nickname'], $result['name']);
-            $user->password = $result['senha'];
+            $user->password = $result['password'];
+            return $user;
         } else {
-            return nuLL;
+            return null;
         }
     }
 }
