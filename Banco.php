@@ -15,11 +15,12 @@
         public static function createSchema() {
             $db = self::getInstance();
             $db->exec('
-                CREATE TABLE IF NOT EXISTS users (
-                    email TEXT PRIMARY KEY,
-                    password TEXT,
+                CREATE TABLE IF NOT EXISTS ranking (
+                    rankingId INTEGER PRIMARY KEY AUTOINCREMENT,
                     nickname TEXT,
-                    name TEXT
+                    hora INTEGER,
+                    minuto INTEGER,
+                    segundo INTEGER
                 )
             ');
         }

@@ -1,5 +1,20 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: roboto;
+    src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: robotoThin;
+    src: url(fonts/Roboto-Thin.ttf);
+}
+
+@font-face {
+    font-family: robotoLight;
+    src: url(fonts/Roboto-Light.ttf);
+}
+
 * {margin: 0px; padding: 0px;}
 
 html {
@@ -24,7 +39,7 @@ header {
 }
 
 li, a {
-    font-family: "Roboto Thin";
+    font-family: robotoThin;
     font-size: 2.5rem;
     color: white;
     text-decoration: none;
@@ -45,9 +60,9 @@ nav#login a {font-size: 1.5rem;}
 
 #main-nav li:hover {background-color: gold;}
 
-#main-nav li:hover a {color: firebrick; font-family: "Roboto Light";}
+#main-nav li:hover a {color: firebrick; font-family: robotoLight;}
 
-#login a:hover {color: gold; font-family: "Roboto Light";}
+#login a:hover {color: gold; font-family: robotoLight;}
 
 /****************************************************
 *                                                   *
@@ -73,7 +88,8 @@ button {
     margin: 1.5rem 0rem;
     padding: 5px;
     font-size: 2.5rem;
-    max-width: 13.5rem;
+    max-width: fit-content;
+    height: fit-content;
     border: none;
     color: white;
     background-color: dodgerblue;
@@ -103,3 +119,57 @@ button:hover {background-color: cornflowerblue;}
     flex-direction: column;
     flex-wrap: nowrap;
 }
+
+#word-finder {border-style: double;}
+
+td {
+    font-size: 2rem;
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    text-align: center;
+}
+
+#word-finder-container {
+    max-width: 61rem;
+    max-height: fit-content;
+    display: none;
+}
+
+#game-container {
+    width: 61rem;
+    height: 51rem;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    background-color: gold;
+}
+
+#category-selection {
+    margin-top: 0rem;
+    padding: .5rem;
+    width: inherit;
+    font-size: 2.5rem;
+    background-color: dodgerblue;
+    border-radius: .5rem;
+    color: white;
+    font-family: roboto;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-content {display: none;}
+
+.hora, .minuto, .segundo {font-size: 2rem; color: forestgreen;}
+
+#btn-fruits, #btn-objects {margin-left: 1rem; margin-right: 1rem;}
+
+#btn-fruits {margin-top: 5rem; max-width: inherit;}
+
+#btn-objects {margin-top: 1.5rem; max-width: inherit;}
+
+.find-words {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.highlighted {background-color: gold;}

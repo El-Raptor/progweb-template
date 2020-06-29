@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarvalap Caça Palavras</title>
+    <link type="text/css" rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Sarvalap[LOGO AQUI]</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="ranking.html">Ranking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="row">
+        <section id="column">
+            <div id="game-container">
+                <span id="category-selection">Selecione uma Categoria</span>
+                <button id="btn-fruits" onclick="selectCategory(1)">Frutas</button>
+                <button id="btn-objects" onclick="selectCategory(2)">Objetos</button>
+            </div>
+            <div id="word-finder-container">
+                <div>
+                    <span class="hora">00</span>
+                    <span class="separador">:</span>
+                    <span class="minuto">00</span>
+                    <span class="separador">:</span>
+                    <span class="segundo">00</span>
+                    <!--<span class="milissegundo">00</span>-->
+                </div>
+                <table id="word-finder">
+                    <tr>
+                        <td id="_1"></td>
+                        <td id="_2"></td>
+                        <td id="_3"></td>
+                        <td id="_4"></td>
+                        <td id="_5"></td>
+                        <td id="_6"></td>
+                        <td id="_7"></td>
+                        <td id="_8"></td>
+                        <td id="_9"></td>
+                        <td id="_10"></td>
+                        <td id="_11"></td>
+                        <td id="_12"></td>
+                        <td id="_13"></td>
+                        <td id="_14"></td>
+                        <td id="_15"></td>
+                        <td id="_16"></td>
+                        <td id="_17"></td>
+                        <td id="_18"></td>
+                        <td id="_19"></td>
+                        <td id="_20"></td>
+                    </tr>
+                    <tr>
+                        <td id="_21"></td>
+                        <td id="_22"></td>
+                        <td id="_23"></td>
+                        <td id="_24"></td>
+                        <td id="_25"></td>
+                        <td id="_26"></td>
+                        <td id="_27"></td>
+                        <td id="_28"></td>
+                        <td id="_29"></td>
+                        <td id="_30"></td>
+                        <td id="_31"></td>
+                        <td id="_32"></td>
+                        <td id="_33"></td>
+                        <td id="_34"></td>
+                        <td id="_35"></td>
+                        <td id="_36"></td>
+                        <td id="_37"></td>
+                        <td id="_38"></td>
+                        <td id="_39"></td>
+                        <td id="_40"></td>
+                    </tr>
+                    <tr>
+                        <td id="_41"></td>
+                        <td id="_42"></td>
+                        <td id="_43"></td>
+                        <td id="_44"></td>
+                        <td id="_45"></td>
+                        <td id="_46"></td>
+                        <td id="_47"></td>
+                        <td id="_48"></td>
+                        <td id="_49"></td>
+                        <td id="_50"></td>
+                        <td id="_51"></td>
+                        <td id="_52"></td>
+                        <td id="_53"></td>
+                        <td id="_54"></td>
+                        <td id="_55"></td>
+                        <td id="_56"></td>
+                        <td id="_57"></td>
+                        <td id="_58"></td>
+                        <td id="_59"></td>
+                        <td id="_60"></td>
+                    </tr>
+                    <tr>
+                        <td id="_61"></td>
+                        <td id="_62"></td>
+                        <td id="_63"></td>
+                        <td id="_64"></td>
+                        <td id="_65"></td>
+                        <td id="_66"></td>
+                        <td id="_67"></td>
+                        <td id="_68"></td>
+                        <td id="_69"></td>
+                        <td id="_70"></td>
+                        <td id="_71"></td>
+                        <td id="_72"></td>
+                        <td id="_73"></td>
+                        <td id="_74"></td>
+                        <td id="_75"></td>
+                        <td id="_76"></td>
+                        <td id="_77"></td>
+                        <td id="_78"></td>
+                        <td id="_79"></td>
+                        <td id="_80"></td>
+                    </tr>
+                    <tr>
+                        <td id="_81"></td>
+                        <td id="_82"></td>
+                        <td id="_83"></td>
+                        <td id="_84"></td>
+                        <td id="_85"></td>
+                        <td id="_86"></td>
+                        <td id="_87"></td>
+                        <td id="_88"></td>
+                        <td id="_89"></td>
+                        <td id="_90"></td>
+                        <td id="_91"></td>
+                        <td id="_92"></td>
+                        <td id="_93"></td>
+                        <td id="_94"></td>
+                        <td id="_95"></td>
+                        <td id="_96"></td>
+                        <td id="_97"></td>
+                        <td id="_98"></td>
+                        <td id="_99"></td>
+                        <td id="_100"></td>
+                    </tr>
+                    <tr>
+                        <td id="_101"></td>
+                        <td id="_102"></td>
+                        <td id="_103"></td>
+                        <td id="_104"></td>
+                        <td id="_105"></td>
+                        <td id="_106"></td>
+                        <td id="_107"></td>
+                        <td id="_108"></td>
+                        <td id="_109"></td>
+                        <td id="_110"></td>
+                        <td id="_111"></td>
+                        <td id="_112"></td>
+                        <td id="_113"></td>
+                        <td id="_114"></td>
+                        <td id="_115"></td>
+                        <td id="_116"></td>
+                        <td id="_117"></td>
+                        <td id="_118"></td>
+                        <td id="_119"></td>
+                        <td id="_120"></td>
+                    </tr>
+                    <tr>
+                        <td id="_121"></td>
+                        <td id="_122"></td>
+                        <td id="_123"></td>
+                        <td id="_124"></td>
+                        <td id="_125"></td>
+                        <td id="_126"></td>
+                        <td id="_127"></td>
+                        <td id="_128"></td>
+                        <td id="_129"></td>
+                        <td id="_130"></td>
+                        <td id="_131"></td>
+                        <td id="_132"></td>
+                        <td id="_133"></td>
+                        <td id="_134"></td>
+                        <td id="_135"></td>
+                        <td id="_136"></td>
+                        <td id="_137"></td>
+                        <td id="_138"></td>
+                        <td id="_139"></td>
+                        <td id="_140"></td>
+                    </tr>
+                    <tr>
+                        <td id="_141"></td>
+                        <td id="_142"></td>
+                        <td id="_143"></td>
+                        <td id="_144"></td>
+                        <td id="_145"></td>
+                        <td id="_146"></td>
+                        <td id="_147"></td>
+                        <td id="_148"></td>
+                        <td id="_149"></td>
+                        <td id="_150"></td>
+                        <td id="_151"></td>
+                        <td id="_152"></td>
+                        <td id="_153"></td>
+                        <td id="_154"></td>
+                        <td id="_155"></td>
+                        <td id="_156"></td>
+                        <td id="_157"></td>
+                        <td id="_158"></td>
+                        <td id="_159"></td>
+                        <td id="_160"></td>
+                    </tr>
+                    <tr>
+                        <td id="_161"></td>
+                        <td id="_162"></td>
+                        <td id="_163"></td>
+                        <td id="_164"></td>
+                        <td id="_165"></td>
+                        <td id="_166"></td>
+                        <td id="_167"></td>
+                        <td id="_168"></td>
+                        <td id="_169"></td>
+                        <td id="_170"></td>
+                        <td id="_171"></td>
+                        <td id="_172"></td>
+                        <td id="_173"></td>
+                        <td id="_174"></td>
+                        <td id="_175"></td>
+                        <td id="_176"></td>
+                        <td id="_177"></td>
+                        <td id="_178"></td>
+                        <td id="_179"></td>
+                        <td id="_180"></td>
+                    </tr>
+                    <tr>
+                        <td id="_181"></td>
+                        <td id="_182"></td>
+                        <td id="_183"></td>
+                        <td id="_184"></td>
+                        <td id="_185"></td>
+                        <td id="_186"></td>
+                        <td id="_187"></td>
+                        <td id="_188"></td>
+                        <td id="_189"></td>
+                        <td id="_190"></td>
+                        <td id="_191"></td>
+                        <td id="_192"></td>
+                        <td id="_193"></td>
+                        <td id="_194"></td>
+                        <td id="_195"></td>
+                        <td id="_196"></td>
+                        <td id="_197"></td>
+                        <td id="_198"></td>
+                        <td id="_199"></td>
+                        <td id="_200"></td>
+                    </tr>
+                    <tr>
+                        <td id="_201"></td>
+                        <td id="_202"></td>
+                        <td id="_203"></td>
+                        <td id="_204"></td>
+                        <td id="_205"></td>
+                        <td id="_206"></td>
+                        <td id="_207"></td>
+                        <td id="_208"></td>
+                        <td id="_209"></td>
+                        <td id="_210"></td>
+                        <td id="_211"></td>
+                        <td id="_212"></td>
+                        <td id="_213"></td>
+                        <td id="_214"></td>
+                        <td id="_215"></td>
+                        <td id="_216"></td>
+                        <td id="_217"></td>
+                        <td id="_218"></td>
+                        <td id="_219"></td>
+                        <td id='_220'></td>
+                    </tr>
+                    <tr>
+                        <td id="_221"></td>
+                        <td id="_222"></td>
+                        <td id="_223"></td>
+                        <td id="_224"></td>
+                        <td id="_225"></td>
+                        <td id="_226"></td>
+                        <td id="_227"></td>
+                        <td id="_228"></td>
+                        <td id="_229"></td>
+                        <td id="_230"></td>
+                        <td id="_231"></td>
+                        <td id="_232"></td>
+                        <td id="_233"></td>
+                        <td id="_234"></td>
+                        <td id="_235"></td>
+                        <td id="_236"></td>
+                        <td id="_237"></td>
+                        <td id="_238"></td>
+                        <td id="_239"></td>
+                        <td id='_240'></td>
+                    </tr>
+                    <tr>
+                        <td id="_241"></td>
+                        <td id="_242"></td>
+                        <td id="_243"></td>
+                        <td id="_244"></td>
+                        <td id="_245"></td>
+                        <td id="_246"></td>
+                        <td id="_247"></td>
+                        <td id="_248"></td>
+                        <td id="_249"></td>
+                        <td id="_250"></td>
+                        <td id="_251"></td>
+                        <td id="_252"></td>
+                        <td id="_253"></td>
+                        <td id="_254"></td>
+                        <td id="_255"></td>
+                        <td id="_256"></td>
+                        <td id="_257"></td>
+                        <td id="_258"></td>
+                        <td id="_259"></td>
+                        <td id='_260'></td>
+                    </tr>
+                    <tr>
+                        <td id="_261"></td>
+                        <td id="_262"></td>
+                        <td id="_263"></td>
+                        <td id="_264"></td>
+                        <td id="_265"></td>
+                        <td id="_266"></td>
+                        <td id="_267"></td>
+                        <td id="_268"></td>
+                        <td id="_269"></td>
+                        <td id="_270"></td>
+                        <td id="_271"></td>
+                        <td id="_272"></td>
+                        <td id="_273"></td>
+                        <td id="_274"></td>
+                        <td id="_275"></td>
+                        <td id="_276"></td>
+                        <td id="_277"></td>
+                        <td id="_278"></td>
+                        <td id="_279"></td>
+                        <td id='_280'></td>
+                    </tr>
+                    <tr>
+                        <td id="_281"></td>
+                        <td id="_282"></td>
+                        <td id="_283"></td>
+                        <td id="_284"></td>
+                        <td id="_285"></td>
+                        <td id="_286"></td>
+                        <td id="_287"></td>
+                        <td id="_288"></td>
+                        <td id="_289"></td>
+                        <td id="_290"></td>
+                        <td id="_291"></td>
+                        <td id="_292"></td>
+                        <td id="_293"></td>
+                        <td id="_294"></td>
+                        <td id="_295"></td>
+                        <td id="_296"></td>
+                        <td id="_297"></td>
+                        <td id="_298"></td>
+                        <td id="_299"></td>
+                        <td id="_300"></td>
+                    </tr>
+                    <tr>
+                        <td id="_301"></td>
+                        <td id="_302"></td>
+                        <td id="_303"></td>
+                        <td id="_304"></td>
+                        <td id="_305"></td>
+                        <td id="_306"></td>
+                        <td id="_307"></td>
+                        <td id="_308"></td>
+                        <td id="_309"></td>
+                        <td id="_310"></td>
+                        <td id="_311"></td>
+                        <td id="_312"></td>
+                        <td id="_313"></td>
+                        <td id="_314"></td>
+                        <td id="_315"></td>
+                        <td id="_316"></td>
+                        <td id="_317"></td>
+                        <td id="_318"></td>
+                        <td id="_319"></td>
+                        <td id="_320"></td>
+                    </tr>
+                    <tr>
+                        <td id="_321"></td>
+                        <td id="_322"></td>
+                        <td id="_323"></td>
+                        <td id="_324"></td>
+                        <td id="_325"></td>
+                        <td id="_326"></td>
+                        <td id="_327"></td>
+                        <td id="_328"></td>
+                        <td id="_329"></td>
+                        <td id="_330"></td>
+                        <td id="_331"></td>
+                        <td id="_332"></td>
+                        <td id="_333"></td>
+                        <td id="_334"></td>
+                        <td id="_335"></td>
+                        <td id="_336"></td>
+                        <td id="_337"></td>
+                        <td id="_338"></td>
+                        <td id="_339"></td>
+                        <td id="_340"></td>
+                    </tr>
+                    <tr>
+                        <td id="_341"></td>
+                        <td id="_342"></td>
+                        <td id="_343"></td>
+                        <td id="_344"></td>
+                        <td id="_345"></td>
+                        <td id="_346"></td>
+                        <td id="_347"></td>
+                        <td id="_348"></td>
+                        <td id="_349"></td>
+                        <td id="_350"></td>
+                        <td id="_351"></td>
+                        <td id="_352"></td>
+                        <td id="_353"></td>
+                        <td id="_354"></td>
+                        <td id="_355"></td>
+                        <td id="_356"></td>
+                        <td id="_357"></td>
+                        <td id="_358"></td>
+                        <td id="_359"></td>
+                        <td id="_360"></td>
+                    </tr>
+                    <tr>
+                        <td id="_361"></td>
+                        <td id="_362"></td>
+                        <td id="_363"></td>
+                        <td id="_364"></td>
+                        <td id="_365"></td>
+                        <td id="_366"></td>
+                        <td id="_367"></td>
+                        <td id="_368"></td>
+                        <td id="_369"></td>
+                        <td id="_370"></td>
+                        <td id="_371"></td>
+                        <td id="_372"></td>
+                        <td id="_373"></td>
+                        <td id="_374"></td>
+                        <td id="_375"></td>
+                        <td id="_376"></td>
+                        <td id="_377"></td>
+                        <td id="_378"></td>
+                        <td id="_379"></td>
+                        <td id="_380"></td>
+                    </tr>
+                    <tr>
+                        <td id="_381"></td>
+                        <td id="_382"></td>
+                        <td id="_383"></td>
+                        <td id="_384"></td>
+                        <td id="_385"></td>
+                        <td id="_386"></td>
+                        <td id="_387"></td>
+                        <td id="_388"></td>
+                        <td id="_389"></td>
+                        <td id="_390"></td>
+                        <td id="_391"></td>
+                        <td id="_392"></td>
+                        <td id="_393"></td>
+                        <td id="_394"></td>
+                        <td id="_395"></td>
+                        <td id="_396"></td>
+                        <td id="_397"></td>
+                        <td id="_398"></td>
+                        <td id="_399"></td>
+                        <td id="_400"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-content">
+                <span>Salve o seu tempo.</span>
+                <form action="index.html" method="POST">
+                    <label for="nickname">Usuário:</label>
+                    <input type="text" id="nickname" name="nickname"><br/><br/>
+                    <input value="sua hora" type="text" id="hora" name="hora"><br/><br/>
+                    <input value="seu minuto" type="text" id="minuto" name="minuto"><br/><br/>
+                    <input value="seu segundo" type="text" id="segundo" name="segundo"><br/><br/>
+                </form>
+            </div>
+        </section>
+        
+    </section>
+
+    <script src="jquery.js"></script>
+    <script language="javascript" src="script.js"></script>
+</body>
+
+</html>
